@@ -5,26 +5,18 @@ import java.io.IOException;
 
 import org.junit.jupiter.api.Test;
 
-class P11657_타임머신Test {
+class P1414_불우이웃돕기Test {
 
 	@Test
 	void testMain() throws IOException {
 
 		//예제1
-		String sInput1 = "3 4\n"
-					   + "1 2 4\n"
-					   + "1 3 3\n"
-					   + "2 3 -4\n"
-					   + "3 1 -2\n";
+		String sInput1 = "3\n"
+					   + "abc\n"
+					   + "def\n"
+					   + "ghi\n";
 		exInput(sInput1);
-		P11657_타임머신.main(null);
-		
-		//예제2
-		String sInput2 = "3 2\n"
-					   + "1 2 4\n"
-					   + "1 2 3\n";
-		exInput(sInput2);
-		P11657_타임머신.main(null);
+		P1414_불우이웃돕기.main(null);
 		
 	}
 	

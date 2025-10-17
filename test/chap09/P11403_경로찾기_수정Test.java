@@ -5,27 +5,30 @@ import java.io.IOException;
 
 import org.junit.jupiter.api.Test;
 
-class P11657_타임머신Test {
+class P11403_경로찾기_수정Test {
 
 	@Test
 	void testMain() throws IOException {
 
 		//예제1
-		String sInput1 = "3 4\n"
-					   + "1 2 4\n"
-					   + "1 3 3\n"
-					   + "2 3 -4\n"
-					   + "3 1 -2\n";
+		String sInput1 = "3\n"
+					   + "0 1 0\n"
+					   + "0 0 1\n"
+					   + "1 0 0\n";
 		exInput(sInput1);
-		P11657_타임머신.main(null);
+		P11403_경로찾기_수정.main(null);
 		
 		//예제2
-		String sInput2 = "3 2\n"
-					   + "1 2 4\n"
-					   + "1 2 3\n";
+		String sInput2 = "7\n"
+					   + "0 0 0 1 0 0 0\n"
+					   + "0 0 0 0 0 0 1\n"
+					   + "0 0 0 0 0 0 0\n"
+					   + "0 0 0 0 1 1 0\n"
+					   + "1 0 0 0 0 0 0\n"
+					   + "0 0 0 0 0 0 1\n"
+					   + "0 0 1 0 0 0 0\n";
 		exInput(sInput2);
-		P11657_타임머신.main(null);
-		
+		P11403_경로찾기_수정.main(null);
 	}
 	
 	void exInput(String input) {
