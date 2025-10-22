@@ -3,13 +3,13 @@ import java.util.*;
 public class P1167_트리의지름 {
   static boolean visited[];
   static int [] distance;
-  static ArrayList<Edge>[] A;
+  static ArrayList<Edge_1677>[] A;
   public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
     int N = sc.nextInt(); // 노드 개수
     A = new ArrayList[N + 1];
     for (int i = 1; i <= N; i++) {
-      A[i] = new ArrayList<Edge>();
+      A[i] = new ArrayList<Edge_1677>();
     }
     for (int i = 0; i < N; i++) {	// A 인접 리스트에 그래프 데이터 저장하기
       int S = sc.nextInt();
@@ -18,7 +18,7 @@ public class P1167_트리의지름 {
         int E = sc.nextInt();
         if(E==-1)break;
         int V = sc.nextInt();
-        A[S].add(new Edge(E, V));
+        A[S].add(new Edge_1677(E, V));
       }
     }
     distance = new int[N+1];
@@ -42,7 +42,7 @@ public class P1167_트리의지름 {
     visited[index] = true;
     while (!queue.isEmpty()) {
       int now_node = queue.poll();
-      for (Edge i : A[now_node]) {
+      for (Edge_1677 i : A[now_node]) {
         int e = i.e;
         int v = i.value;
         if (!visited[e]) {
@@ -54,11 +54,11 @@ public class P1167_트리의지름 {
     }
   }
 }
-class Edge {
+class Edge_1677 {
   int e;
   int value;
 
-  public Edge(int e, int value) {
+  public Edge_1677(int e, int value) {
       this.e = e ;
       this.value = value;
   }

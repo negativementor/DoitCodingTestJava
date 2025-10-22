@@ -3,7 +3,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
-public class P11659_구간합구하기 {
+public class P11659_구간합구하기_수정 {
   public static void main(String[] args) throws IOException {
     BufferedReader bufferedReader 
       = new BufferedReader(new InputStreamReader(System.in));
@@ -12,6 +12,7 @@ public class P11659_구간합구하기 {
     int suNo = Integer.parseInt(stringTokenizer.nextToken());
     int quizNo = Integer.parseInt(stringTokenizer.nextToken());
     long[] S = new long[suNo + 1];
+    long[] R = new long[quizNo];	//결과값 배열
     stringTokenizer = new StringTokenizer(bufferedReader.readLine());
     for (int i = 1; i <= suNo; i++) {
       S[i] = S[i - 1] + Integer.parseInt(stringTokenizer.nextToken());
@@ -20,7 +21,11 @@ public class P11659_구간합구하기 {
       stringTokenizer = new StringTokenizer(bufferedReader.readLine());
       int i = Integer.parseInt(stringTokenizer.nextToken());
       int j = Integer.parseInt(stringTokenizer.nextToken());
-      System.out.println(S[j] - S[i - 1]);
+      R[q] = S[j] - S[i - 1];	//결과값 저장
+    }
+    //결과값 출력
+    for (int q=0; q < quizNo; q++) {
+    	System.out.println(R[q]);
     }
   }
 }

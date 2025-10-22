@@ -10,11 +10,26 @@ class P11660_구간합구하기2Test {
 	void testMain() throws Exception {
 		
 		//예제1
-        exInput("4 3\n1 2 3 4\n2 3 4 5\n3 4 5 6\n4 5 6 7\n2 2 3 4\n3 4 3 4\n1 1 4 4");
+		String sInput1 = "4 3\n"
+					   + "1 2 3 4\n"
+					   + "2 3 4 5\n"
+					   + "3 4 5 6\n"
+					   + "4 5 6 7\n"
+					   + "2 2 3 4\n"
+					   + "3 4 3 4\n"
+					   + "1 1 4 4\n";
+		exInput(sInput1);
         P11660_구간합구하기2.main(null);
         
 		//예제2
-        exInput("2 4\n1 2\n3 4\n1 1 1 1\n1 2 1 2\n2 1 2 1\n2 2 2 2");
+		String sInput2 = "2 4\n"
+					   + "1 2\n"
+					   + "3 4\n"
+					   + "1 1 1 1\n"
+					   + "1 2 1 2\n"
+					   + "2 1 2 1\n"
+					   + "2 2 2 2\n";
+		exInput(sInput2);
         P11660_구간합구하기2.main(null);
         
 	}

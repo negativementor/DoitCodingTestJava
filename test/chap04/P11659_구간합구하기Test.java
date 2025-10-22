@@ -11,7 +11,12 @@ class P11659_구간합구하기Test {
 	void testMain() throws IOException {
 
         //예제1
-        exInput("5 3\n5 4 3 2 1\n1 3\n2 4\n5 5");
+		String sInput1 = "5 3\n"
+					   + "5 4 3 2 1\n"
+					   + "1 3\n"
+					   + "2 4\n"
+					   + "5 5\n";
+		exInput(sInput1);
         P11659_구간합구하기.main(null);
         
 	}
